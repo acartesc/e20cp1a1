@@ -18,7 +18,7 @@
         <td><%= user.email %></td>
         <td><%= user.name %></td>
         <td><%= user.role %></td>
-        <td><%= link_to 'Editar', edit_user_registration_path, class: 'btn btn-sm btn-success' %></td>
+        <td><%= link_to 'Editar', edit_dashboard_path(user), class: 'btn btn-sm btn-success' %></td>
         <td>
           <% if can? :destroy, user %>
             <%= link_to 'Eliminar', dashboard_path(user.id), method: :delete, data: { confirm: 'Estás seguro que deseas eliminar el Usuario?' }, class: 'btn btn-sm btn-danger' %>
